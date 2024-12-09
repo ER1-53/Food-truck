@@ -1,10 +1,9 @@
-import './globals.css';
-import Header from './components/Header';
-import Footer from './components/Footer';
-import CategorieNav from './components/CategorieNav';
-import Nav from './components/Nav';
-import Main from './main';
-import { ReactNode } from 'react';
+import "./globals.css";
+import Header from "./components/Header";
+import Footer from "./components/Footer";
+import CategorieNav from "./components/CategorieNav";
+import Nav from "./components/Nav";
+import { ReactNode } from "react";
 
 export const metadata = {
   title: "Votre Application",
@@ -24,10 +23,11 @@ export default function RootLayout({ children }: { children: ReactNode }) {
             <CategorieNav />
           </aside>
 
-          <main className="flex-grow mt-2">
+          <main className="flex-grow">
             <Nav />
-            {children}
-            <Main />
+            <div className="flex flex-col w-full max-h-full items-center justify-center mt-10">
+              {children}
+            </div>
           </main>
         </div>
 
